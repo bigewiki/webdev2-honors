@@ -2,10 +2,10 @@
 ** Foundation Styles
 ***********************/
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 body {
   background-color: #8b9398;
@@ -15,18 +15,26 @@ body {
   margin: 0px;
 }
 
+p,
+h1 {
+  padding: 10px 20px;
+  color: #1e2428;
+}
+
 /***********************
 ** Header and Nav Styles
 ***********************/
 
 header {
-  background-color: #009900;
+  background-color: #2b343a;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   height: 50px;
   align-items: center;
+  box-shadow: rgb(93, 93, 93) 5px 5px 15px;
+  z-index: 99;
 }
 
 nav ul {
@@ -39,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #2b343a;
+  color: white;
 }
 
 /***********************
@@ -50,11 +58,34 @@ nav ul li a {
   width: 100%;
 }
 
+main {
+  padding-top: 20px;
+}
+
+.feature-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 40%;
+  box-shadow: rgb(93, 93, 93) 5px 5px 15px;
+}
+
 /***********************
 ** Sidebar Styles
 ***********************/
 #sidebar {
   background-color: #3e4b54;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(20, 20, 20) 2px 2px 15px;
+  z-index: 0;
 }
 
 #logo {
@@ -73,8 +104,22 @@ aside {
 #sidebar ul li a {
   text-decoration: none;
   color: white;
+  list-style: none;
 }
 
 /***********************
 ** Footer Styles
 ***********************/
+
+footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#copyright {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
