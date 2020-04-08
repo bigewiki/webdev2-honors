@@ -18,7 +18,11 @@ body {
 p,
 h1 {
   padding: 10px 20px;
-  color: #1e2428;
+  color: white;
+}
+
+h1 {
+  font-family: "Titillium Web", sans-serif;
 }
 
 /***********************
@@ -26,14 +30,14 @@ h1 {
 ***********************/
 
 header {
-  background-color: #2b343a;
+  background-color: rgba(8, 26, 26, 0.8);
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   height: 50px;
   align-items: center;
-  box-shadow: rgb(93, 93, 93) 5px 5px 15px;
+  box-shadow: rgb(36, 36, 36) 5px 5px 15px;
   z-index: 99;
 }
 
@@ -56,10 +60,16 @@ nav ul li a {
 
 #main-content {
   width: 100%;
+  background: no-repeat center/cover url("img/background.png");
 }
 
 main {
-  padding-top: 20px;
+  margin: 30px;
+  padding: 20px 5px;
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 5px;
+  border: 0.5px solid #0d2a2a;
+  box-shadow: rgba(22, 22, 22, 0.6) 10px 10px 15px;
 }
 
 .feature-wrapper {
@@ -70,18 +80,24 @@ main {
 }
 
 .feature-card {
-  background-color: white;
-  margin: 10px;
+  background-color: #f9f9f9;
+  margin: 20px;
   padding: 10px;
   width: 40%;
-  box-shadow: rgb(93, 93, 93) 5px 5px 15px;
+  box-shadow: rgba(22, 22, 22, 0.6) 10px 10px 15px;
+  border-radius: 2px;
+}
+
+.feature-card p {
+  color: black;
+  font-family: "Titillium Web", sans-serif;
 }
 
 /***********************
 ** Sidebar Styles
 ***********************/
 #sidebar {
-  background-color: #3e4b54;
+  background-color: #133a3a;
   display: flex;
   flex-direction: column;
   box-shadow: rgb(20, 20, 20) 2px 2px 15px;
@@ -89,8 +105,8 @@ main {
 }
 
 #logo {
-  width: 300px;
-  padding: 10px;
+  width: 250px;
+  padding: 20px;
 }
 
 aside {
@@ -105,6 +121,10 @@ aside {
   text-decoration: none;
   color: white;
   list-style: none;
+}
+
+#sidebar .sidebar-nav-parent {
+  padding-bottom: 20px;
 }
 
 /***********************
