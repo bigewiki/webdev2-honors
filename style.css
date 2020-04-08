@@ -1,0 +1,80 @@
+/***********************
+** Foundation Styles
+***********************/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #8b9398;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+/***********************
+** Header and Nav Styles
+***********************/
+
+header {
+  background-color: #009900;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 50px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  padding: 5px 10px;
+}
+
+nav ul li a {
+  color: #2b343a;
+}
+
+/***********************
+** Main Content Styles
+***********************/
+
+#main-content {
+  width: 100%;
+}
+
+/***********************
+** Sidebar Styles
+***********************/
+#sidebar {
+  background-color: #3e4b54;
+}
+
+#logo {
+  width: 300px;
+  padding: 10px;
+}
+
+aside {
+  margin: 30px 10px;
+}
+
+#sidebar ul li {
+  padding: 5px;
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/***********************
+** Footer Styles
+***********************/
