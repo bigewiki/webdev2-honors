@@ -32,6 +32,15 @@ h1 {
   margin-top: 30px;
 }
 
+.flex-wrapper {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 /***********************
 ** Header and Nav Styles
 ***********************/
@@ -96,17 +105,15 @@ main {
   border-radius: 2px;
 }
 
-.feature-card p {
+.feature-card p,
+.feature-card h2 {
   color: black;
   font-family: "Titillium Web", sans-serif;
 }
 
-.flex-wrapper {
-  display: flex;
-}
-
 figure {
   margin: 20px;
+  width: 400px;
 }
 
 figcaption {
@@ -156,6 +163,15 @@ caption h2 {
 
 iframe {
   margin: 10px;
+}
+
+pre code {
+  background-color: rgba(20, 20, 20, 0.6);
+  color: white;
+  display: block;
+  padding: 20px;
+  margin: 20px;
+  font-family: "Roboto Mono", monospace;
 }
 
 /***********************
