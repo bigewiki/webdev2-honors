@@ -60,6 +60,7 @@ header {
 nav ul {
   display: flex;
   flex-direction: row;
+  margin-right: 20px;
 }
 
 nav ul li {
@@ -68,6 +69,12 @@ nav ul li {
 
 nav ul li a {
   color: white;
+  padding: 5px;
+  opacity: 0.8;
+}
+
+nav ul li a:hover {
+  opacity: 1;
 }
 
 /***********************
@@ -202,6 +209,10 @@ aside {
   text-decoration: none;
   color: white;
   list-style: none;
+}
+
+#sidebar ul li a:hover {
+  color: #cae0e0;
 }
 
 #sidebar .sidebar-nav-parent {
