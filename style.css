@@ -154,6 +154,10 @@ caption h2 {
   padding: 10px;
 }
 
+iframe {
+  margin: 10px;
+}
+
 /***********************
 ** Sidebar Styles
 ***********************/
