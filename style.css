@@ -83,6 +83,7 @@ nav ul li a:hover {
 
 #main-content {
   width: 100%;
+  /* REQUIREMENT: Added 2020-04-18 - Background image */
   background: no-repeat center/cover url("img/background.png");
   overflow-y: scroll;
 }
@@ -103,13 +104,26 @@ main {
   flex-wrap: wrap;
 }
 
-.feature-card {
-  background-color: #f9f9f9;
-  margin: 20px;
-  padding: 10px;
+.feature-card-link {
+  display: block;
   width: 40%;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.feature-card {
+  padding: 20px;
+  background-color: #f9f9f9;
+  max-width: 100%;
   box-shadow: rgba(22, 22, 22, 0.6) 10px 10px 15px;
   border-radius: 2px;
+  opacity: 0.85;
+}
+
+.feature-card:hover {
+  opacity: 1;
+  box-shadow: rgba(36, 109, 109, 0.7) 10px 10px 15px;
+  transition: all 0.5s linear;
 }
 
 .feature-card p,
