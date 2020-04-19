@@ -93,6 +93,7 @@ main {
   padding: 20px 5px;
   background-color: rgba(20, 20, 20, 0.6);
   border-radius: 5px;
+  /* REQUIREMENT: Added 2020-04-18: Border */
   border: 0.5px solid #0d2a2a;
   box-shadow: rgba(22, 22, 22, 0.6) 10px 10px 15px;
 }
