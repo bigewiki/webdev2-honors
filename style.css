@@ -112,12 +112,14 @@ main {
 }
 
 .feature-card {
-  padding: 20px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
   max-width: 100%;
   box-shadow: rgba(22, 22, 22, 0.6) 10px 10px 15px;
   border-radius: 2px;
   opacity: 0.85;
+  height: 100%;
+  transition: all 0.5s linear;
 }
 
 .feature-card:hover {
@@ -130,6 +132,8 @@ main {
 .feature-card h2 {
   color: black;
   font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 figure {
