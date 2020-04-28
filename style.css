@@ -254,3 +254,94 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+/***********************
+** Form Styles
+***********************/
+
+form {
+  max-width: 100%;
+  margin: 20px;
+  display: block;
+}
+
+label,
+legend {
+  color: white;
+  font-size: 18px;
+}
+
+label,
+input,
+select {
+  width: 30%;
+  min-width: 200px;
+}
+
+label {
+  padding: 10px 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  display: block;
+}
+
+fieldset div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.column-fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-fieldset label {
+  width: 100%;
+  text-align: center;
+}
+
+textarea {
+  margin: 20px auto;
+  width: 70%;
+  min-width: 500px;
+  height: 200px;
+  box-sizing: content-box;
+  font-size: 16px;
+}
+
+select {
+  box-sizing: content-box;
+  font-size: 18px;
+  padding: 10px;
+  background-color: white;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin: 10px;
+  opacity: 0.8;
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+
+input[type="reset"] {
+  background-color: rgba(128, 0, 0, 0.7);
+}

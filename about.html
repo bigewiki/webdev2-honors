@@ -6,8 +6,8 @@
     <!-- REQUIREMENT 2020-04-07: Meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Edward Muniz" />
-    <meta name="description" content="Guide to WordPress Migrations" />
-    <meta name="keywords" content="wordpress wp transfer migration" />
+    <meta name="description" content="About page to WP Migration Guide" />
+    <meta name="keywords" content="about edward contact history" />
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
@@ -115,98 +115,104 @@
               migration project. Fortunately the form won't work, feel free to
               submit it anyways.
             </p>
-            <!-- REQUIREMENT: FORM added 2020-04-27 -->
-            <form action="#" method="GET">
-              <!-- REQUIREMENT: FIELDSET added 2020-04-27 -->
-              <fieldset>
-                <!-- REQUIREMENT: LEGEND added 2020-04-27 -->
-                <legend>Your Information</legend>
-                <div>
-                  <!-- REQUIREMENT: FIELD LABEL added 2020-04-27 -->
-                  <label for="fname">Your first name*</label>
-                  <!-- REQUIREMENT: INPUT, PLACEHOLDER, AND REQUIRED added 2020-04-27 -->
-                  <input
-                    placeholder="Jack"
-                    name="fname"
-                    id="fname"
-                    type="text"
-                    required
-                  />
+            <div>
+              <!-- REQUIREMENT: FORM added 2020-04-27 -->
+              <form action="#" method="GET">
+                <!-- REQUIREMENT: FIELDSET added 2020-04-27 -->
+                <fieldset>
+                  <!-- REQUIREMENT: LEGEND added 2020-04-27 -->
+                  <legend>Your Information</legend>
+                  <div>
+                    <!-- REQUIREMENT: FIELD LABEL added 2020-04-27 -->
+                    <label for="fname">Your first name*</label>
+                    <!-- REQUIREMENT: INPUT, PLACEHOLDER, AND REQUIRED added 2020-04-27 -->
+                    <input
+                      placeholder="Jack"
+                      name="fname"
+                      id="fname"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="lname">Your last name*</label>
+                    <input
+                      placeholder="Skellington"
+                      name="lname"
+                      id="lname"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="email">Your Email*</label>
+                    <!-- REQUIREMENT: DATA TYPE 1 - EMAIL added 2020-04-27 -->
+                    <input
+                      placeholder="jack_skellington@email.com"
+                      name="email"
+                      id="email"
+                      type="email"
+                      required
+                    />
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Website Information</legend>
+                  <div>
+                    <label for="sitename">What's the URL to your site?</label>
+                    <!-- REQUIREMENT: PATTERN added 2020-04-27 -->
+                    <input
+                      placeholder="https://mysite.com/blog"
+                      name="sitename"
+                      id="sitename"
+                      type="text"
+                      pattern="https?://.+"
+                    />
+                  </div>
+                  <div>
+                    <label for="sitetype">How is your website built?</label>
+                    <select id="sitetype" name="sitetype">
+                      <option value="WordPress">WordPress</option>
+                      <option value="Joomla">Joomla</option>
+                      <option value="Drupal">Drupal</option>
+                      <option value="Magento">Magento</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="version">Version number (if WordPress)</label>
+                    <!-- REQUIREMENT: DATA TYPE #2 - number added 2020-04-27 -->
+                    <!-- REQUIREMENT: MIN AND MAX added 2020-04-27 -->
+                    <input
+                      placeholder="4.7"
+                      name="version"
+                      id="version"
+                      type="number"
+                      min="1"
+                      max="5.4"
+                      step=".1"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="column-fieldset">
+                  <legend>What are you looking for?</legend>
+                  <label for="comment"
+                    >Please leave your comment or question</label
+                  >
+                  <textarea
+                    name="comment"
+                    id="comment"
+                    placeholder="I need help with my migration..."
+                  ></textarea>
+                </fieldset>
+                <div class="flex-center">
+                  <!-- REQUIREMENT: RESET BUTTON added 2020-04-27 -->
+                  <input type="reset" value="Reset" />
+                  <!-- REQUIREMENT: SUBMIT BUTTON added 2020-04-27 -->
+                  <input type="submit" value="Submit" />
                 </div>
-                <div>
-                  <label for="lname">Your last name*</label>
-                  <input
-                    placeholder="Skellington"
-                    name="lname"
-                    id="lname"
-                    type="text"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="email">Your Email*</label>
-                  <!-- REQUIREMENT: DATA TYPE 1 - EMAIL added 2020-04-27 -->
-                  <input
-                    placeholder="jack_skellington@email.com"
-                    name="email"
-                    id="email"
-                    type="email"
-                    required
-                  />
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Website Information</legend>
-                <div>
-                  <label for="sitename">What's the URL to your site?</label>
-                  <!-- REQUIREMENT: PATTERN added 2020-04-27 -->
-                  <input
-                    placeholder="Lassy"
-                    name="sitename"
-                    id="sitename"
-                    type="text"
-                    pattern="https?://.+"
-                  />
-                </div>
-                <div>
-                  <label for="sitetype">How is your website built?</label>
-                  <select id="sitetype" name="sitetype">
-                    <option value="WordPress">WordPress</option>
-                    <option value="Joomla">Joomla</option>
-                    <option value="Drupal">Drupal</option>
-                    <option value="Magento">Magento</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="version">Version number (if WordPress)</label>
-                  <!-- REQUIREMENT: DATA TYPE #2 - number added 2020-04-27 -->
-                  <!-- REQUIREMENT: MIN AND MAX added 2020-04-27 -->
-                  <input
-                    placeholder="4.7"
-                    name="version"
-                    id="version"
-                    type="number"
-                    min="1"
-                    max="5.4"
-                    step=".1"
-                  />
-                </div>
-              </fieldset>
-              <fieldset class="column-fieldset">
-                <legend>What are you looking for?</legend>
-                <label for="comment"
-                  >Please leave your comment or question</label
-                >
-                <textarea name="comment" id="comment"></textarea>
-              </fieldset>
-              <div class="flex-container">
-                <!-- REQUIREMENT: RESET BUTTON added 2020-04-27 -->
-                <input type="reset" value="Reset" />
-                <!-- REQUIREMENT: SUBMIT BUTTON added 2020-04-27 -->
-                <input type="submit" value="Submit" />
-              </div>
-            </form>
+              </form>
+            </div>
           </article>
         </section>
       </main>
