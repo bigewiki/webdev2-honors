@@ -37,103 +37,71 @@
       <main>
         <section>
           <h1>Advanced</h1>
-          <h2>Subheader</h2>
+          <h2>Disclaimer</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac
-            neque nec quam condimentum ultricies. Curabitur ac lacus sed sem
-            semper condimentum sit amet sed urna. Phasellus non mi cursus,
-            luctus ex sit amet, commodo ipsum. Mauris faucibus non ipsum eu
-            faucibus. Aenean quis consectetur enim, non ultricies nibh. Nunc
-            commodo, est et tempus aliquam, mi dolor fermentum nisi, nec
-            tristique orci mi sit amet eros. Duis augue libero, lacinia eu nibh
-            pretium, ornare tristique orci. Nam et dapibus augue, quis pretium
-            nulla. Duis malesuada ante massa, a blandit turpis lobortis sed.
-            Vivamus sem est, auctor a neque eu, lobortis vulputate diam. Sed
-            eget eros maximus, maximus eros vel, euismod massa.
+            The advanced guide assumes that you understand more than a novice
+            WordPress user and:
+          </p>
+          <ul id="disclaimer-list">
+            <li>Have done a few migrations before</li>
+            <li>Experienced with Linux command line</li>
+            <li>Understand DNS</li>
+            <li>Comfortable with WordPress file struture</li>
+          </ul>
+          <p>
+            <strong class="emphasize">
+              With this context, I go into less detail and give fewer points of
+              caution.
+            </strong>
           </p>
         </section>
         <section class="top-margin">
-          <h2>Subheader</h2>
+          <h2>Rsync</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
-            varius tortor, eget lobortis mi. Nullam in scelerisque tortor, quis
-            porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-            malesuada sagittis felis, a vulputate libero venenatis pellentesque.
-            Aliquam vel feugiat quam, sed lobortis nunc. Donec a lacus eu felis
-            feugiat tristique. Phasellus blandit consequat maximus.
+            If you’re looking for the most effective means to copy files from
+            one server to another, then look no further than rsync. Rsync is a
+            Linux utility that enables you to copy files locally or even between
+            servers. Because rsync uses SSH to connect it’s more secure than
+            standard FTP (as secure as SFTP) and much faster. Some hosts require
+            SSH keys to connect, but most simply need the hosting account
+            username and password. This is particularly true with hosting
+            providers that use cPanel. Another benefit to rsync is that it makes
+            quick work of amending any discrepancies between the two directories
+            targeted in the sync, copying only files that need it. Rerunning the
+            command is virtually harmless, ensures both directories match
+            exactly, and resolves quickly if there’s little-to-no work to do.
+          </p>
+          <p>
+            For more detail and to learn about additional flags you can use with
+            the rsync command, check the
+            <a href="https://linux.die.net/man/1/rsync" target="_blank"
+              >man page</a
+            >.
           </p>
           <pre><code>Code Example Here</code></pre>
         </section>
         <section class="top-margin">
-          <h2>Subheader</h2>
+          <h2>MySQL, MySQLDump, and WP CLI</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
-            varius tortor, eget lobortis mi. Nullam in scelerisque tortor, quis
-            porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-            malesuada sagittis felis, a vulputate libero venenatis pellentesque.
-            Aliquam vel feugiat quam, sed lobortis nunc. Donec a lacus eu felis
-            feugiat tristique. Phasellus blandit consequat maximus.
+            You can perform an entire WordPress migration from your terminal.
+            The mysql utility allows you to, not only, execute MySQL commands
+            from your command prompt, but to also import an entire database with
+            one command. Likewise, the mysqldump utility lets a user export an
+            entire database, or specific terminals, with the proper syntax. WP
+            CLI has support for both these functions using the db import and db
+            export commands and doesn’t require passing arguments for the
+            database name, user, or password since it will read those values
+            from the wp-config.php file.
           </p>
           <p>
-            Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-            at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-            tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-            euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-            sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend. Aenean
-            varius eros varius, semper lacus et, accumsan sapien. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Sed pharetra elit
-            at felis sagittis, quis aliquet nibh auctor.
-          </p>
-          <pre><code>Code Example Here</code></pre>
-        </section>
-        <section class="top-margin">
-          <h2>Subheader</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
-            varius tortor, eget lobortis mi. Nullam in scelerisque tortor, quis
-            porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-            malesuada sagittis felis, a vulputate libero venenatis pellentesque.
-            Aliquam vel feugiat quam, sed lobortis nunc. Donec a lacus eu felis
-            feugiat tristique. Phasellus blandit consequat maximus.
-          </p>
-          <p>
-            Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-            at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-            tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-            euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-            sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend. Aenean
-            varius eros varius, semper lacus et, accumsan sapien. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Sed pharetra elit
-            at felis sagittis, quis aliquet nibh auctor.
+            <a
+              href="https://developer.wordpress.org/cli/commands/db/"
+              target="_blank"
+              >For more information please check out the WP CLI
+              documentation.</a
+            >
           </p>
           <pre><code>Code Example Here</code></pre>
-          <div class="flex-center">
-            <figure>
-              <img
-                class="aside-img"
-                src="img/screenshot.png"
-                alt="placeholder"
-              />
-              <figcaption>
-                Placeholder Image
-              </figcaption>
-            </figure>
-          </div>
-          <p>
-            Vivamus commodo id augue ut varius. Quisque ut congue nisi. Donec
-            pellentesque sit amet orci et laoreet. Donec placerat aliquam
-            libero. Morbi ipsum mauris, tristique a diam at, tincidunt aliquet
-            lectus. Mauris vitae placerat lacus, quis placerat nibh. Cras in
-            odio non turpis porta vestibulum vitae id tellus. Integer et
-            dignissim neque. Pellentesque aliquam massa nisi, quis aliquam justo
-            accumsan non. Donec dictum felis vitae dolor interdum bibendum. Sed
-            et elit euismod, volutpat sem vel, volutpat ipsum. Nunc commodo,
-            tellus a commodo auctor, ligula neque ornare orci, in accumsan nulla
-            tellus a ante. Aliquam nec mi tempor enim blandit lacinia non non
-            quam. In hendrerit tincidunt tellus, vel fringilla erat venenatis
-            in. Cras hendrerit risus eu sapien dapibus, viverra consequat augue
-            fringilla.
-          </p>
         </section>
       </main>
     </div>

@@ -205,6 +205,28 @@ pre code {
   font-family: "Roboto Mono", monospace;
 }
 
+#disclaimer-list {
+  color: white;
+  margin-left: 20px;
+}
+
+#disclaimer-list li {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 2px;
+}
+
+.emphasize {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px dashed white;
+  margin-top: 20px;
+}
+
 /***********************
 ** Sidebar Styles
 ***********************/
