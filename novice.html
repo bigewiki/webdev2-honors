@@ -37,155 +37,265 @@
       <main>
         <section>
           <h1>Novice</h1>
+          <h2>Things to Know</h2>
+          <h3>Don’t Bring Down Your Site</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac
-            neque nec quam condimentum ultricies. Curabitur ac lacus sed sem
-            semper condimentum sit amet sed urna. Phasellus non mi cursus,
-            luctus ex sit amet, commodo ipsum. Mauris faucibus non ipsum eu
-            faucibus. Aenean quis consectetur enim, non ultricies nibh. Nunc
-            commodo, est et tempus aliquam, mi dolor fermentum nisi, nec
-            tristique orci mi sit amet eros. Duis augue libero, lacinia eu nibh
-            pretium, ornare tristique orci. Nam et dapibus augue, quis pretium
-            nulla. Duis malesuada ante massa, a blandit turpis lobortis sed.
-            Vivamus sem est, auctor a neque eu, lobortis vulputate diam. Sed
-            eget eros maximus, maximus eros vel, euismod massa.
+            Anyone who hasn’t done a migration before should consider a few
+            things. First, and most importantly, never alter files or databases
+            on the source (the original server). The source version of your
+            website should, ideally, stay online during your migration. If your
+            web hosting subscription is running out and aren’t certain you have
+            enough time to complete your migration end-to-end, consider
+            extending your hosting. A proper migration copies files and
+            databases, consider this procedure as more of a clone and less of a
+            move. That being said you should always keep a backup of your site
+            through one means or another, especially during migration but also a
+            best practice. A lot of the plugins I mention below handle making
+            backups and there are a lot of great backup plugins that are free!
           </p>
           <p>
-            Praesent vitae sem vitae neque convallis hendrerit eget sed sem.
-            Vivamus et elit pharetra, vestibulum orci et, pellentesque nulla.
-            Fusce in nunc eget eros condimentum tincidunt lobortis id eros.
-            Nullam eleifend lectus et diam aliquet sodales. Praesent eu rhoncus
-            ante, a vulputate lacus. Vivamus erat erat, rutrum at orci nec,
-            commodo finibus lectus. Morbi scelerisque metus eros, at egestas
-            urna sodales nec. Quisque rutrum risus id turpis tristique, ut
-            commodo velit pellentesque. Phasellus in enim quis libero luctus
-            dictum. Ut in dapibus urna. Nunc ac ultricies leo, vel sodales
-            sapien. Nulla fringilla justo sed nulla ullamcorper, sit amet
-            iaculis purus efficitur. Vestibulum risus neque, placerat ut nibh
-            laoreet, fringilla vehicula quam. Cras a tortor in velit ultrices
-            placerat. Donec ultricies ut ante in maximus. Pellentesque tortor
-            magna, suscipit imperdiet dui id, blandit imperdiet lectus.
-            Vestibulum sagittis dui in enim luctus tincidunt. Sed eget risus non
-            lacus molestie fringilla ac sed justo. Integer et lectus ex. Sed
-            imperdiet sapien sed ipsum efficitur, in sollicitudin felis porta.
-            Praesent laoreet congue gravida. Cras at enim malesuada, iaculis
-            ligula at, tincidunt sapien. Nulla tempus eget leo nec auctor.
-            Maecenas finibus ultricies sodales. Curabitur sollicitudin nisl eget
-            tristique viverra. Suspendisse fringilla metus at dolor tempus
-            molestie. Integer ac auctor purus.
+            You haven’t botched a migration unless you’ve brought down or broken
+            your live website. If your business or livelihood depends on your
+            site having minimal downtime, please take extra care during this
+            transition. Bringing down your website could also affect your SEO in
+            a negative way.
+          </p>
+          <h3>DNS and Domains</h3>
+          <p>
+            Next, a word on DNS and domains. Before and during a migration it’s
+            not a good idea to update DNS or start a domain transfer to your new
+            host. You may accidentally bring down your website and/or email by
+            doing so unless your migration is already complete. If you aren’t
+            sure what DNS is or how yours works talk to your web hosting support
+            team. In short, DNS is the mechanism that directs internet traffic
+            to your web hosting server when they type your domain into their
+            browser. Once your migration is done then DNS will need to be
+            updated, reach out to your support team if you need direction.
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/mpQZVYPuDGU"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h3>Anatomy of a WordPress Site</h3>
+          <p>
+            All WordPress sites are made of two major parts: the website files
+            and the database. In the document root of your WordPress site is a
+            configuration file named wp-config.php which contains the database
+            connection strings that will need to be updated on the new server.
+            If you’re using a plugin you won’t likely need to touch this file.
+            Also inside your document root are three main directories or folders
+            that WordPress needs. The first, and most important to you, is the
+            wp-content folder, which has your uploads (media), plugins, and
+            themes. The second and third are part of the WordPress core:
+            wp-includes and wp-admin.
           </p>
           <p>
-            Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-            at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-            tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-            euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-            sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend. Aenean
-            varius eros varius, semper lacus et, accumsan sapien. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Sed pharetra elit
-            at felis sagittis, quis aliquet nibh auctor.
+            The WordPress database is likely (((BOLD the most important part)))
+            of your WordPress site, other than your uploads. The database holds
+            all the things that make your site unique, including all your page
+            content. The WordPress database is composed of several tables,
+            though you may not need to worry about what’s inside as much as
+            everything being there during the migration.
+          </p>
+          <p>
+            Consider your website a paperweight if you only have the files
+            without the database or visa-versa. Some of the WordPress files can
+            be replaced, advanced migration methods allow you to only migrate
+            what’s necessary and replace the rest. For the novice migrator,
+            consider all your files important and your database as critical.
+          </p>
+          <h3>Previewing the Migrated Version</h3>
+          <p>
+            Because we’ve taken extra care to ensure our website stays online
+            during this transition you may find it difficult to preview the site
+            on the new server. With WordPress, there are two reliable ways to do
+            this: updating the hosts file on your computer or setting your WP
+            site on a temporary URL. Both have their pros and cons.
+          </p>
+          <p>
+            On Windows, Mac, and Linux, within your system files, there is a
+            particular file we’re interested in called the hosts file. Using
+            this file you can override where your computer resolves to find a
+            specified hostname, such as a domain. Altering system files is
+            dangerous business so always grab an original copy and understand
+            how to put it back to how you found it. Just like if you were to
+            take something apart with the intention of putting it back together;
+            keep track of what screws and bolts went where, how the parts came
+            off, and how to put them back. Check out this
+            <a
+              href="https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/"
+              target="_blank"
+              >article</a
+            >
+            from How-To Geek for a more in-depth walkthrough on updating your
+            hosts file.
+          </p>
+          <p>
+            Updating to a temporary URL is a second option but should only be
+            considered if there’s something, such as SSL issues, that prevent
+            you from using the hosts file method above. As always, keep a backup
+            of your database and understand how to recover if you make a
+            mistake, this should be considered more dangerous than the hosts
+            file method unless you know what you’re doing. Sometimes all that’s
+            required is that you set your site_url and home_url values within
+            the options table of your database, but more likely there are
+            references to your original URL littered throughout your database.
+            Check out this
+            <a
+              href="https://www.wpbeginner.com/plugins/how-to-update-urls-when-moving-your-wordpress-site/"
+              target="_blank"
+              >article</a
+            >
+            from WPBeginner for an easy method. If you’re comfortable with the
+            command line you could also use the
+            <a
+              href="https://developer.wordpress.org/cli/commands/search-replace/"
+              target="_blank"
+              >WP CLI search-replace</a
+            >
+            utility.
+          </p>
+          <p>
+            Reiterating, once again, updating your hosts file is the best way to
+            preview your site before it goes live on the new server. An
+            alternative, which isn’t 100% but works fairly well, is
+            <a href="https://hosts.cx/" target="_blank">hosts.cx</a>. You give
+            it an IP and a domain and that’s really it! Some links may be broken
+            in the preview that would otherwise work under normal circumstances.
           </p>
         </section>
-        <section class="top-margin flex-wrapper">
-          <div>
-            <h2>Subheader</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
-            </p>
-          </div>
+        <section class="top-margin">
+          <h2>Plugins</h2>
+          <p>
+            For most WordPress users, especially those with little experience
+            with migrations, using a plugin is a great solution to make this
+            quick and simple. Most of these plugins work by exporting your site
+            on the ‘source’ and importing on the ‘destination’. Be aware that
+            while plugins are simpler to use there are limitations on how big
+            your site can be, even if these limits aren’t advertised. Large
+            sites will commonly timeout during an import or export. In some
+            cases, the better plugins can handle larger sites by breaking the
+            site up into multiple packages, but this is commonly a premium
+            feature. You can see the top migration plugins listed on the
+
+            <a
+              target="_blank"
+              href="https://wordpress.org/plugins/search/migration/"
+              >WordPress repository</a
+            >.
+          </p>
+          <p>
+            WP Beginner has taken the time to go into an in-depth comparison on
+            their
+            <a
+              href="https://www.wpbeginner.com/showcase/best-wordpress-migration-plugins-compared/"
+              >site</a
+            >. I’ve put together a comparison table for your convenience as
+            well! Some of the plugins listed below offer free and paid versions
+            with varying access to features. They are not listed in any
+            particular order, though I do recommend All-in-One WP Migration for
+            larger sites and a more dependable migration.
+          </p>
           <!-- REQUIREMENT 2020-04-15: Table -->
           <table id="comparison-table">
             <caption>
-              <h2>Plugin Features</h2>
+              <h2>Plugin Comparison</h2>
             </caption>
             <thead>
               <tr>
-                <th>PLACEHOLDER</th>
-                <th>PLACEHOLDER</th>
-                <th>PLACEHOLDER</th>
+                <th>Plugin</th>
+                <th>Features</th>
+                <th>Limits</th>
+                <th>Price</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
+                <th>Duplicator</th>
+                <td>
+                  Easy step-by-step wizard, migrate to a new domain, scheduled
+                  backups, connects to cPanel, supports multisite.
+                </td>
+                <td>
+                  Requires FTP, problematic with large websites
+                </td>
+                <td>
+                  Starting at $59/year
+                </td>
               </tr>
               <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
+                <th>
+                  All-in-One WP Migration
+                </th>
+                <td>
+                  Most popular migration plugin, specialized in migrations and
+                  not backups, tested and supported with a large number of
+                  providers, platforms, and versions, including older versions,
+                  can handle larger sites by exporting chunks at a time.
+                </td>
+                <td>
+                  Free version limited to 512 MB, need to manually install
+                  WordPress on the destination, multisite requires a separate
+                  paid extension.
+                </td>
+                <td>
+                  Unlimited at $69 for a lifetime license.
+                </td>
               </tr>
               <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
+                <th>
+                  Backup Buddy
+                </th>
+                <td>
+                  Scheduled backups/restore, upload to remote, support full
+                  WordPress backup, staging site support.
+                </td>
+                <td>
+                  Does not support multisite, not as easy to use.
+                </td>
+                <td>
+                  Starting at $80 per site
+                </td>
               </tr>
               <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
-              </tr>
-              <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
-              </tr>
-              <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
-              </tr>
-              <tr>
-                <th>PLACEHOLDER</th>
-                <td>PLACEHOLDER</td>
-                <td>PLACEHOLDER</td>
+                <th>
+                  UpdraftPlus Premium
+                </th>
+                <td>
+                  Easy to use, Updraft’s free version is the most popular backup
+                  plugin, schedule backups, upload to remote locations,
+                  incremental backups for performance.
+                </td>
+                <td>
+                  Must install WordPress on the destination.
+                </td>
+                <td>
+                  $30 for Migrator Addon or $70 for the full version.
+                </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section class="top-margin flex-wrapper">
-          <figure>
-            <img src="img/screenshot.png" alt="placeholder" />
-            <figcaption>
-              Placeholder
-            </figcaption>
-          </figure>
+        <section class="top-margin">
           <div>
-            <h2>Subheader</h2>
+            <h2>Hire a Professional</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
+              If you’re not sure about migrating your own website and need help,
+              consider your options. A lot of web hosts have tools and support
+              for new customers migrating their website to them, this could make
+              the process easy and give you a comfortable safety net. A lot of
+              hosts offer a migration service, sometimes this service is even
+              free for new and upgrading customers. If you have no other choice
+              you can check out
+              <a href="https://www.upwork.com/" target="_blank">Fiverr</a> or
+              <a href="https://www.upwork.com/" target="_blank">Upwork</a> and
+              hire a freelancer. Be careful with trusting third parties to
+              migrate your site, particularly since you need to give them some
+              sort of access, usually passwords.
             </p>
           </div>
         </section>

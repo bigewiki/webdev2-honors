@@ -19,7 +19,8 @@ body {
 
 p,
 h1,
-h2 {
+h2,
+h3 {
   padding: 10px 20px;
   color: white;
 }
@@ -39,6 +40,10 @@ h1 {
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+a {
+  color: #b0dddd;
 }
 
 /***********************
