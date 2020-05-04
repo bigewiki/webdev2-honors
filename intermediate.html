@@ -37,111 +37,150 @@
       <main>
         <section>
           <h1>Intermediate</h1>
+          <div class="flex-wrapper">
+            <div>
+              <h2>FTP</h2>
+              <p>
+                File Transfer Protocol, or FTP, is the primary method for moving
+                files between remote servers and your local environment. If
+                you’re a bit more technically inclined then this is a great
+                method for copying your files. If you haven’t migrated a site
+                before or if it’s been a while check out my (((Things to Know
+                LINK))) section for some information you should know before
+                starting your migration.
+              </p>
+              <p>
+                Doing an FTP transfer requires having some sort of client or
+                program. The most popular choice is FileZilla, though you could
+                consider alternatives such as CyberDuck, WinSCP, Transmit, or
+                Free FTP. WP Beginner has a great
+                <a
+                  href="https://www.wpbeginner.com/showcase/6-best-ftp-clients-for-wordpress-users/"
+                  target="_blank"
+                  >article</a
+                >
+                that compares these clients.
+              </p>
+              <p>
+                Most FTP clients work by connecting to a remote server, which
+                you’ll need settings for. Your web host should be able to
+                provide you the settings you need and tell you what path to find
+                your files in. Always favor the secure connection, known as SFTP
+                or FTPs, for added peace of mind. Once you’re connected you’ll
+                use the program to copy your website files down to your local
+                machine, be wary of the file paths where you’re copying files to
+                and from. This could take a while, depending on the size of your
+                site, your connection, and the quality of the server.
+              </p>
+            </div>
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SuyMvWrVZ1M"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac
-            neque nec quam condimentum ultricies. Curabitur ac lacus sed sem
-            semper condimentum sit amet sed urna. Phasellus non mi cursus,
-            luctus ex sit amet, commodo ipsum. Mauris faucibus non ipsum eu
-            faucibus. Aenean quis consectetur enim, non ultricies nibh. Nunc
-            commodo, est et tempus aliquam, mi dolor fermentum nisi, nec
-            tristique orci mi sit amet eros. Duis augue libero, lacinia eu nibh
-            pretium, ornare tristique orci. Nam et dapibus augue, quis pretium
-            nulla. Duis malesuada ante massa, a blandit turpis lobortis sed.
-            Vivamus sem est, auctor a neque eu, lobortis vulputate diam. Sed
-            eget eros maximus, maximus eros vel, euismod massa.
+            Once you’ve copied the files locally you’ll need to upload them to
+            the destination server. You’ll need another set of FTP settings to
+            connect to the destination server before this upload can begin.
+            Another prerequisite is that you understand where your files need to
+            go on the so you drop them in the right place. Your web hosting
+            support team should be able to assist with this if you need help.
           </p>
         </section>
-        <section class="top-margin flex-wrapper">
-          <div>
-            <h2>Subheader</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
-            </p>
+        <section class="top-margin">
+          <div class="flex-wrapper">
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/cfLFO7kiS2Y?start=178"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <h2>PHPMyAdmin</h2>
+              <p>
+                A good portion of large web hosts use a platform called cPanel,
+                which includes everything you need to use your web hosting
+                account. One of the tools included is called PHPMyAdmin, a
+                database administration application with access to your
+                WordPress database.
+              </p>
+              <p>
+                Assuming you’ve already downloaded your WordPress files you
+                should have a file called wp-config.php. If you open it up it
+                will have 4 lines of code with your DB_NAME, DB_USER,
+                DB_PASSWORD, and DB_HOST. These lines represent your database
+                connection strings and will, likely, need to be updated after
+                creating a new database on the destination server. For now,
+                we’re only concerned with the DB_NAME, which, as you might’ve
+                guessed, represents the name of your WordPress database.
+              </p>
+              <p>
+                Inside of PHPMyAdmin on the source account, on the left, you’ll
+                see a list of all the databases that your instance of PHPMyAdmin
+                has access to. Be careful not to change anything while you’re in
+                here, there’s a lot that can go wrong if you’re not careful.
+                Select your database on the left, you should see the WordPress
+                tables appear on the right. At the top, find the tab that says
+                export. Most current versions of PHPMyAdmin will have a ‘quick’
+                option here that lets you walk away with a complete database
+                backup that is downloaded to your computer.
+              </p>
+            </div>
           </div>
-          <div>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/COSdHb-uSPA"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <p>
+            On the destination end you can, once again, use PHPMyAdmin to import
+            the database by selecting the database on the left then clicking the
+            import tab at the top. You can use the UI there to select the .sql
+            or .sql.gz database backup file and import it to its new home.
+            Before doing so make sure you’ve created the new database and are
+            importing your database backup into an empty database. When you’re
+            creating a new database make note of the name of the database and
+            the username/password that connects to it. You’ll have to update
+            these values accordingly, as previously mentioned, in the
+            wp-config.php on the destination side. Stay aware of what files
+            you’re editing and where. Accidently updating the config file on the
+            source could bring down your website.
+          </p>
         </section>
-        <section class="top-margin flex-wrapper">
-          <figure>
-            <img src="img/screenshot.png" alt="placeholder" />
-            <figcaption>
-              Placeholder
-            </figcaption>
-          </figure>
-          <div>
-            <h2>Subheader</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
-            </p>
-          </div>
-        </section>
-        <section class="top-margin flex-wrapper">
-          <figure>
-            <img src="img/screenshot.png" alt="placeholder" />
-            <figcaption>
-              Placeholder
-            </figcaption>
-          </figure>
-          <div>
-            <h2>Subheader</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
-            </p>
+        <section class="top-margin">
+          <div class="flex-wrapper">
+            <div>
+              <h2>Alternatives</h2>
+              <p>
+                If you have a lightweight WordPress site and your web host uses
+                cPanel, you can use File Manager to create a zip or tar file of
+                your WordPress site. This could be a bit easier and quicker than
+                connecting through FTP. You can also use File Manager to upload
+                and unzip/untar your WordPress backup on the destination,
+                assuming that File Manager is available.
+              </p>
+              <p>
+                Most modern versions of cPanel also include a backup utility
+                that you can use to easily get a backup of a specific database.
+                File backups are usually available as well but include way more
+                than you need.
+              </p>
+            </div>
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/wROa37k_RQA"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </section>
       </main>
