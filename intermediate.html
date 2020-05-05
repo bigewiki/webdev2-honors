@@ -17,10 +17,24 @@
     />
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9bf2aeb3dd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="main-content">
       <header>
+        <div class="mobile-row">
+          <div>
+            <a href="index.html" class="mobile-show">
+              <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
+            </a>
+          </div>
+          <div id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
         <nav>
           <ul>
             <li>
@@ -199,12 +213,9 @@
       </div>
       <footer>
         <div id="copyright"></div>
-        <script>
-          document.getElementById(
-            "copyright"
-          ).innerHTML = `Copyright &copy; ${new Date().getFullYear()}<br/> WP Migration Guide`;
-        </script>
+        <script src="featureCard.js"></script>
         <script src="sidebarAside.js"></script>
+        <script src="script.js"></script>
       </footer>
     </div>
   </body>
