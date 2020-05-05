@@ -44,7 +44,7 @@
       <main>
         <section>
           <h1>Novice</h1>
-          <h2>Things to Know</h2>
+          <h2 id="link1">Things to Know</h2>
           <div class="flex-wrapper">
             <div class="half">
               <h3>Don’t Bring Down Your Site</h3>
@@ -223,7 +223,7 @@
           </p>
         </section>
         <section class="top-margin">
-          <h2>Plugins</h2>
+          <h2 id="link2">Plugins</h2>
           <p>
             For most WordPress users, especially those with little experience
             with migrations, using a plugin is a great solution to make this
@@ -337,7 +337,7 @@
         <section class="top-margin">
           <div class="flex-wrapper">
             <div class="half">
-              <h2>Hire a Professional</h2>
+              <h2 id="link3">Hire a Professional</h2>
               <p>
                 If you’re not sure about migrating your own website and need
                 help, consider your options. A lot of web hosts have tools and
@@ -366,57 +366,13 @@
       </main>
     </div>
     <div id="sidebar">
-      <a href="#">
+      <a href="index.html">
         <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
       </a>
-      <aside>
-        <ul>
-          <li class="sidebar-nav-parent">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="about.html">About</a>
-            <ul>
-              <li>
-                <a href="about.html#">WP Migration Overview</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="novice.html">Novice</a>
-            <ul>
-              <li>
-                <a href="novice.html#">Plugins</a>
-              </li>
-              <li>
-                <a href="novice.html#">Hire a Professional</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="intermediate.html">Intermediate</a>
-            <ul>
-              <li>
-                <a href="intermediate.html#">FTP</a>
-              </li>
-              <li>
-                <a href="intermediate.html#">PHPMyAdmin</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="advanced.html">Advanced</a>
-            <ul>
-              <li>
-                <a href="advanced.html#">Rsync</a>
-              </li>
-              <li>
-                <a href="advanced.html#">MySQLDump</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
+      <div>
+        <!-- Another example of a web component -->
+        <sidebar-aside />
+      </div>
       <footer>
         <div id="copyright"></div>
         <script>
@@ -424,6 +380,7 @@
             "copyright"
           ).innerHTML = `Copyright &copy; ${new Date().getFullYear()}<br/> WP Migration Guide`;
         </script>
+        <script src="sidebarAside.js"></script>
       </footer>
     </div>
   </body>

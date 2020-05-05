@@ -23,7 +23,7 @@ const content = {
     can use them too.`,
 };
 
-class featureCard extends HTMLElement {
+class FeatureCard extends HTMLElement {
   constructor() {
     super();
     const title = this.getAttribute("title");
@@ -38,4 +38,4 @@ class featureCard extends HTMLElement {
   }
 }
 
-customElements.define("feature-card", featureCard);
+customElements.define("feature-card", FeatureCard);

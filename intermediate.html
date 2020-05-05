@@ -46,15 +46,15 @@
           <h1>Intermediate</h1>
           <div class="flex-wrapper">
             <div>
-              <h2>FTP</h2>
+              <h2 id="link1">FTP</h2>
               <p>
                 File Transfer Protocol, or FTP, is the primary method for moving
                 files between remote servers and your local environment. If
                 you’re a bit more technically inclined then this is a great
                 method for copying your files. If you haven’t migrated a site
-                before or if it’s been a while check out my (((Things to Know
-                LINK))) section for some information you should know before
-                starting your migration.
+                before or if it’s been a while check out my
+                <a href="novice.html#link1">Things to Know</a> section for some
+                information you should know before starting your migration.
               </p>
               <p>
                 Doing an FTP transfer requires having some sort of client or
@@ -111,7 +111,7 @@
               ></iframe>
             </div>
             <div>
-              <h2>PHPMyAdmin</h2>
+              <h2 id="link2">PHPMyAdmin</h2>
               <p>
                 A good portion of large web hosts use a platform called cPanel,
                 which includes everything you need to use your web hosting
@@ -160,7 +160,7 @@
         <section class="top-margin">
           <div class="flex-wrapper">
             <div>
-              <h2>Alternatives</h2>
+              <h2 id="link3">Alternatives</h2>
               <p>
                 If you have a lightweight WordPress site and your web host uses
                 cPanel, you can use File Manager to create a zip or tar file of
@@ -190,57 +190,13 @@
       </main>
     </div>
     <div id="sidebar">
-      <a href="#">
+      <a href="index.html">
         <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
       </a>
-      <aside>
-        <ul>
-          <li class="sidebar-nav-parent">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="about.html">About</a>
-            <ul>
-              <li>
-                <a href="about.html#">WP Migration Overview</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="novice.html">Novice</a>
-            <ul>
-              <li>
-                <a href="novice.html#">Plugins</a>
-              </li>
-              <li>
-                <a href="novice.html#">Hire a Professional</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="intermediate.html">Intermediate</a>
-            <ul>
-              <li>
-                <a href="intermediate.html#">FTP</a>
-              </li>
-              <li>
-                <a href="intermediate.html#">PHPMyAdmin</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="advanced.html">Advanced</a>
-            <ul>
-              <li>
-                <a href="advanced.html#">Rsync</a>
-              </li>
-              <li>
-                <a href="advanced.html#">MySQLDump</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
+      <div>
+        <!-- Another example of a web component -->
+        <sidebar-aside />
+      </div>
       <footer>
         <div id="copyright"></div>
         <script>
@@ -248,6 +204,7 @@
             "copyright"
           ).innerHTML = `Copyright &copy; ${new Date().getFullYear()}<br/> WP Migration Guide`;
         </script>
+        <script src="sidebarAside.js"></script>
       </footer>
     </div>
   </body>

@@ -84,54 +84,10 @@
       <a href="#">
         <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
       </a>
-      <aside>
-        <ul>
-          <li class="sidebar-nav-parent">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="about.html">About</a>
-            <ul>
-              <li>
-                <a href="about.html#">WP Migration Overview</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="novice.html">Novice</a>
-            <ul>
-              <li>
-                <a href="novice.html#">Plugins</a>
-              </li>
-              <li>
-                <a href="novice.html#">Hire a Professional</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="intermediate.html">Intermediate</a>
-            <ul>
-              <li>
-                <a href="intermediate.html#">FTP</a>
-              </li>
-              <li>
-                <a href="intermediate.html#">PHPMyAdmin</a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-nav-parent">
-            <a href="advanced.html">Advanced</a>
-            <ul>
-              <li>
-                <a href="advanced.html#">Rsync</a>
-              </li>
-              <li>
-                <a href="advanced.html#">MySQLDump</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
+      <div>
+        <!-- Another example of a web component -->
+        <sidebar-aside />
+      </div>
       <footer>
         <div id="copyright"></div>
         <script>
@@ -140,6 +96,7 @@
           ).innerHTML = `Copyright &copy; ${new Date().getFullYear()}<br/> WP Migration Guide`;
         </script>
         <script src="featureCard.js"></script>
+        <script src="sidebarAside.js"></script>
       </footer>
     </div>
   </body>
