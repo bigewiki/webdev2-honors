@@ -82,6 +82,26 @@ nav ul li a:hover {
   opacity: 1;
 }
 
+.mobile-show {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+.mobile-row {
+  display: flex;
+  flex-direction: row;
+}
+
 /***********************
 ** Main Content Styles
 ***********************/
@@ -446,6 +466,7 @@ input[type="reset"] {
 
 /* REQUIREMENT added 2020-05-03 tablet media query */
 @media only screen and (min-width: 800px) and (max-width: 1250px) {
+  /* REQUIREMENT added 2020-05-03 media query 1 */
   .feature-wrapper,
   .flex-wrapper,
   fieldset div,
@@ -456,6 +477,7 @@ input[type="reset"] {
     align-items: center;
   }
 
+  /* REQUIREMENT added 2020-05-03 media query 2 */
   .feature-card-link,
   figure,
   input,
@@ -466,6 +488,7 @@ input[type="reset"] {
     width: 90%;
   }
 
+  /* REQUIREMENT added 2020-05-03 media query 3 */
   figure img {
     width: 100%;
   }
@@ -484,5 +507,102 @@ input[type="reset"] {
 
   .tablet-hide {
     display: none;
+  }
+}
+
+/* REQUIREMENT added 2020-05-03 mobile media query */
+@media only screen and (max-width: 799px) {
+  /* REQUIREMENT added 2020-05-03 media query 1 */
+  .feature-wrapper,
+  .flex-wrapper,
+  fieldset div,
+  desktop-row,
+  .half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* REQUIREMENT added 2020-05-03 media query 2 */
+  .feature-card-link,
+  figure,
+  input,
+  label,
+  select,
+  textarea,
+  .half img {
+    width: 90%;
+  }
+
+  /* REQUIREMENT added 2020-05-03 media query 3 */
+  figure img {
+    width: 100%;
+  }
+
+  html {
+    height: auto;
+  }
+
+  body {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  #main-content {
+    overflow-y: auto;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show,
+  #hamburger {
+    display: block;
+  }
+
+  .mobile-show #logo {
+    height: 150px;
+    width: auto;
+  }
+
+  sidebar-aside,
+  sidebar-aside a {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sidebar-nav-parent {
+    padding-top: 30px;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+  }
+
+  .mobile-row {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  nav ul li {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding: 20px 0;
   }
 }
