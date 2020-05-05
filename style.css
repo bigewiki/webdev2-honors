@@ -517,7 +517,8 @@ input[type="reset"] {
   .flex-wrapper,
   fieldset div,
   desktop-row,
-  .half {
+  .half,
+  .flex-center {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -532,6 +533,7 @@ input[type="reset"] {
   textarea,
   .half img {
     width: 90%;
+    min-width: 90%;
   }
 
   /* REQUIREMENT added 2020-05-03 media query 3 */
@@ -604,5 +606,14 @@ input[type="reset"] {
     line-height: 40px;
     text-align: center;
     padding: 20px 0;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  iframe {
+    max-width: 100% !important;
+    margin: 0;
   }
 }
