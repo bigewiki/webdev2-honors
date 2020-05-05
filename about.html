@@ -25,7 +25,11 @@
         <div class="mobile-row">
           <div>
             <a href="index.html" class="mobile-show">
-              <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
+              <img
+                src="img/wp-migration-guide-logo.png"
+                class="logo"
+                alt="logo"
+              />
             </a>
           </div>
           <div id="hamburger">
@@ -167,6 +171,8 @@
                       name="fname"
                       id="fname"
                       type="text"
+                      minlength="1"
+                      maxlength="20"
                       required
                     />
                   </div>
@@ -177,6 +183,8 @@
                       name="lname"
                       id="lname"
                       type="text"
+                      minlength="1"
+                      maxlength="20"
                       required
                     />
                   </div>
@@ -225,9 +233,7 @@
                       id="version"
                       type="number"
                       min="1"
-                      minlength="1"
                       max="5.4"
-                      maxlength="2"
                       step=".1"
                     />
                   </div>
@@ -257,11 +263,11 @@
     </div>
     <div id="sidebar">
       <a href="index.html" class="mobile-hide">
-        <img src="img/wp-migration-guide-logo.png" id="logo" alt="logo" />
+        <img src="img/wp-migration-guide-logo.png" class="logo" alt="logo" />
       </a>
       <div>
         <!-- Another example of a web component -->
-        <sidebar-aside />
+        <sidebar-aside></sidebar-aside>
       </div>
       <footer>
         <div id="copyright"></div>

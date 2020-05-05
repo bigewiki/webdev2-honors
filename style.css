@@ -308,7 +308,7 @@ mark {
   z-index: 0;
 }
 
-#logo {
+.logo {
   width: 250px;
   padding: 20px;
 }
@@ -497,7 +497,7 @@ input[type="reset"] {
     width: 200px;
   }
 
-  #logo {
+  .logo {
     width: 100%;
   }
 
@@ -563,7 +563,7 @@ input[type="reset"] {
     display: block;
   }
 
-  .mobile-show #logo {
+  .mobile-show .logo {
     height: 150px;
     width: auto;
   }
