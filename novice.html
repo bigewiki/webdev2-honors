@@ -45,72 +45,99 @@
         <section>
           <h1>Novice</h1>
           <h2>Things to Know</h2>
-          <h3>Don’t Bring Down Your Site</h3>
-          <p>
-            Anyone who hasn’t done a migration before should consider a few
-            things. First, and most importantly,
-            <!-- REQUIRMENT added 2020-05-04: text-level element 4 -->
-            <mark>never alter files or databases on the source</mark> (the
-            original server). The source version of your website should,
-            ideally, stay online during your migration. If your web hosting
-            subscription is running out and aren’t certain you have enough time
-            to complete your migration end-to-end, consider extending your
-            hosting. A proper migration copies files and databases, consider
-            this procedure as more of a clone and less of a move. That being
-            said you should always keep a backup of your site through one means
-            or another, especially during migration but also a best practice. A
-            lot of the plugins I mention below handle making backups and there
-            are a lot of great backup plugins that are free!
-          </p>
-          <p>
-            You haven’t botched a migration unless you’ve brought down or broken
-            your live website. If your business or livelihood depends on your
-            site having minimal downtime, please take extra care during this
-            transition. Bringing down your website could also affect your SEO in
-            a negative way.
-          </p>
-          <h3>DNS and Domains</h3>
-          <p>
-            Next, a word on DNS and domains. Before and during a migration it’s
-            not a good idea to update DNS or start a domain transfer to your new
-            host. You may accidentally bring down your website and/or email by
-            doing so unless your migration is already complete. If you aren’t
-            sure what DNS is or how yours works talk to your web hosting support
-            team. In short, DNS is the mechanism that directs internet traffic
-            to your web hosting server when they type your domain into their
-            browser. Once your migration is done then DNS will need to be
-            updated, reach out to your support team if you need direction.
-          </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/mpQZVYPuDGU"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h3>Anatomy of a WordPress Site</h3>
-          <p>
-            All WordPress sites are made of two major parts: the website files
-            and the database. In the document root of your WordPress site is a
-            configuration file named wp-config.php which contains the database
-            connection strings that will need to be updated on the new server.
-            If you’re using a plugin you won’t likely need to touch this file.
-            Also inside your document root are three main directories or folders
-            that WordPress needs. The first, and most important to you, is the
-            wp-content folder, which has your uploads (media), plugins, and
-            themes. The second and third are part of the WordPress core:
-            wp-includes and wp-admin.
-          </p>
-          <p>
-            The WordPress database is likely
-            <!-- REQUIRMENT added 2020-05-04: text-level element 5 -->
-            <b>the most important part</b>
-            of your WordPress site, other than your uploads. The database holds
-            all the things that make your site unique, including all your page
-            content. The WordPress database is composed of several tables,
-            though you may not need to worry about what’s inside as much as
-            everything being there during the migration.
-          </p>
+          <div class="flex-wrapper">
+            <div class="half">
+              <h3>Don’t Bring Down Your Site</h3>
+              <p>
+                Anyone who hasn’t done a migration before should consider a few
+                things. First, and most importantly,
+                <!-- REQUIRMENT added 2020-05-04: text-level element 4 -->
+                <mark>never alter files or databases on the source</mark> (the
+                original server). The source version of your website should,
+                ideally, stay online during your migration. If your web hosting
+                subscription is running out and aren’t certain you have enough
+                time to complete your migration end-to-end, consider extending
+                your hosting. A proper migration copies files and databases,
+                consider this procedure as more of a clone and less of a move.
+                That being said you should always keep a backup of your site
+                through one means or another, especially during migration but
+                also a best practice. A lot of the plugins I mention below
+                handle making backups and there are a lot of great backup
+                plugins that are free!
+              </p>
+              <p>
+                You haven’t botched a migration unless you’ve brought down or
+                broken your live website. If your business or livelihood depends
+                on your site having minimal downtime, please take extra care
+                during this transition. Bringing down your website could also
+                affect your SEO in a negative way.
+              </p>
+            </div>
+            <div class="half">
+              <!-- REQUIREMENT added 2020-05-04 image with alt description 1 -->
+              <img src="img/money-cropped.jpg" alt="burning money" />
+            </div>
+          </div>
+          <div class="flex-wrapper">
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/mpQZVYPuDGU"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <h3>DNS and Domains</h3>
+              <p>
+                Next, a word on DNS and domains. Before and during a migration
+                it’s not a good idea to update DNS or start a domain transfer to
+                your new host. You may accidentally bring down your website
+                and/or email by doing so unless your migration is already
+                complete. If you aren’t sure what DNS is or how yours works talk
+                to your web hosting support team. In short, DNS is the mechanism
+                that directs internet traffic to your web hosting server when
+                they type your domain into their browser. Once your migration is
+                done then DNS will need to be updated, reach out to your support
+                team if you need direction.
+              </p>
+            </div>
+          </div>
+          <div class="flex-wrapper">
+            <div class="half">
+              <h3>Anatomy of a WordPress Site</h3>
+              <p>
+                All WordPress sites are made of two major parts: the website
+                files and the database. In the document root of your WordPress
+                site is a configuration file named wp-config.php which contains
+                the database connection strings that will need to be updated on
+                the new server. If you’re using a plugin you won’t likely need
+                to touch this file. Also inside your document root are three
+                main directories or folders that WordPress needs. The first, and
+                most important to you, is the wp-content folder, which has your
+                uploads (media), plugins, and themes. The second and third are
+                part of the WordPress core: wp-includes and wp-admin.
+              </p>
+              <p>
+                The WordPress database is likely
+                <!-- REQUIRMENT added 2020-05-04: text-level element 5 -->
+                <b>the most important part</b>
+                of your WordPress site, other than your uploads. The database
+                holds all the things that make your site unique, including all
+                your page content. The WordPress database is composed of several
+                tables, though you may not need to worry about what’s inside as
+                much as everything being there during the migration.
+              </p>
+            </div>
+            <div class="half">
+              <!-- REQUIREMENT added 2020-05-04 image with alt description 2 -->
+              <img
+                src="img/file-structure-horizontal.png"
+                alt="Important WordPress Files/Folders"
+              />
+            </div>
+          </div>
           <p>
             Some of the WordPress files can be replaced, advanced migration
             methods allow you to only migrate what’s necessary and replace the
@@ -118,35 +145,49 @@
             your database as critical.
           </p>
           <blockquote>
-            Consider your website a paperweight if you only have the files
-            without the database or visa-versa.
+            Consider your WordPress website a paperweight if you only have the
+            files without the database or visa-versa.
           </blockquote>
-          <h3>Previewing the Migrated Version</h3>
-          <p>
-            Because we’ve taken extra care to ensure our website stays online
-            during this transition you may find it difficult to preview the site
-            on the new server. With WordPress, there are two reliable ways to do
-            this: updating the hosts file on your computer or setting your WP
-            site on a temporary URL. Both have their pros and cons.
-          </p>
-          <p>
-            On Windows, Mac, and Linux, within your system files, there is a
-            particular file we’re interested in called the hosts file. Using
-            this file you can override where your computer resolves to find a
-            specified hostname, such as a domain. Altering system files is
-            dangerous business so always grab an original copy and understand
-            how to put it back to how you found it. Just like if you were to
-            take something apart with the intention of putting it back together;
-            keep track of what screws and bolts went where, how the parts came
-            off, and how to put them back. Check out this
-            <a
-              href="https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/"
-              target="_blank"
-              >article</a
-            >
-            from How-To Geek for a more in-depth walkthrough on updating your
-            hosts file.
-          </p>
+          <div class="flex-wrapper">
+            <div class="half">
+              <!-- REQUIREMENT added 2020-05-04 image with alt description 3 -->
+              <img
+                src="img/hostscx.png"
+                alt="hosts.cx input for previewing websites"
+              />
+            </div>
+            <div class="half">
+              <h3>Previewing the Migrated Version</h3>
+              <p>
+                Because we’ve taken extra care to ensure our website stays
+                online during this transition you may find it difficult to
+                preview the site on the new server. With WordPress, there are
+                two reliable ways to do this: updating the hosts file on your
+                computer or setting your WP site on a temporary URL. Both have
+                their pros and cons.
+              </p>
+              <p>
+                On Windows, Mac, and Linux, within your system files, there is a
+                particular file we’re interested in called the hosts file. Using
+                this file you can override where your computer resolves to find
+                a specified hostname, such as a domain. Altering system files is
+                dangerous business so always grab an original copy and
+                understand how to put it back to how you found it. Just like if
+                you were to take something apart with the intention of putting
+                it back together; keep track of what screws and bolts went
+                where, how the parts came off, and how to put them back. Check
+                out this
+                <a
+                  href="https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/"
+                  target="_blank"
+                  >article</a
+                >
+                from How-To Geek for a more in-depth walkthrough on updating
+                your hosts file.
+              </p>
+            </div>
+          </div>
+
           <p>
             Updating to a temporary URL is a second option but should only be
             considered if there’s something, such as SSL issues, that prevent
@@ -294,52 +335,32 @@
           </table>
         </section>
         <section class="top-margin">
-          <div>
-            <h2>Hire a Professional</h2>
-            <p>
-              If you’re not sure about migrating your own website and need help,
-              consider your options. A lot of web hosts have tools and support
-              for new customers migrating their website to them, this could make
-              the process easy and give you a comfortable safety net. A lot of
-              hosts offer a migration service, sometimes this service is even
-              free for new and upgrading customers. If you have no other choice
-              you can check out
-              <a href="https://www.upwork.com/" target="_blank">Fiverr</a> or
-              <a href="https://www.upwork.com/" target="_blank">Upwork</a> and
-              hire a freelancer. Be careful with trusting third parties to
-              migrate your site, particularly since you need to give them some
-              sort of access, usually passwords.
-            </p>
-          </div>
-        </section>
-        <section class="top-margin flex-wrapper">
-          <figure>
-            <img src="img/screenshot.png" alt="placeholder" />
-            <figcaption>
-              Placeholder
-            </figcaption>
-          </figure>
-          <div>
-            <h2>Subheader</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              non varius tortor, eget lobortis mi. Nullam in scelerisque tortor,
-              quis porttitor elit. Cras at euismod ante, id viverra metus. Nunc
-              malesuada sagittis felis, a vulputate libero venenatis
-              pellentesque. Aliquam vel feugiat quam, sed lobortis nunc. Donec a
-              lacus eu felis feugiat tristique. Phasellus blandit consequat
-              maximus.
-            </p>
-            <p>
-              Etiam elementum magna ex, eget varius nulla pharetra id. Curabitur
-              at consectetur magna, eget varius lectus. Suspendisse nec sem eu
-              tortor placerat malesuada. Donec sodales eu massa ac egestas. Nam
-              euismod risus eu tristique euismod. Etiam pellentesque nibh ut
-              sodales facilisis. Sed ac quam dapibus ex hendrerit eleifend.
-              Aenean varius eros varius, semper lacus et, accumsan sapien.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed
-              pharetra elit at felis sagittis, quis aliquet nibh auctor.
-            </p>
+          <div class="flex-wrapper">
+            <div class="half">
+              <h2>Hire a Professional</h2>
+              <p>
+                If you’re not sure about migrating your own website and need
+                help, consider your options. A lot of web hosts have tools and
+                support for new customers migrating their website to them, this
+                could make the process easy and give you a comfortable safety
+                net. A lot of hosts offer a migration service, sometimes this
+                service is even free for new and upgrading customers. If you
+                have no other choice you can check out
+                <a href="https://www.upwork.com/" target="_blank">Fiverr</a> or
+                <a href="https://www.upwork.com/" target="_blank">Upwork</a> and
+                hire a freelancer. Be careful with trusting third parties to
+                migrate your site, particularly since you need to give them some
+                sort of access, usually passwords.
+              </p>
+            </div>
+            <div class="half">
+              <!-- REQUIREMENT added 2020-05-04 image with alt description 4 -->
+              <img
+                class="grayscale"
+                src="img/tie.jpg"
+                alt="Professional in tie, courtesy of Pixabay.com"
+              />
+            </div>
           </div>
         </section>
       </main>

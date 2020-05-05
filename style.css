@@ -243,6 +243,36 @@ blockquote {
   border-left: 3px solid #2a7f7f;
 }
 
+.half img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+mark {
+  background-color: #acd2d2;
+  color: black;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.hover-effect {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* REQUIREMENT added 2020-05-05 - advanced CSS styling on an image */
+.hover-effect:hover {
+  box-shadow: rgb(3, 4, 5) -5px 5px 15px;
+  bottom: 5px;
+  left: 5px;
+  transition: all 0.3s;
+}
+
 /***********************
 ** Sidebar Styles
 ***********************/
@@ -387,4 +417,20 @@ input[type="submit"] {
 
 input[type="reset"] {
   background-color: rgba(128, 0, 0, 0.7);
+}
+
+/***********************
+** Form Styles
+***********************/
+
+/* REQUIREMENT added 2020-05-03 desktop media query */
+@media only screen and (min-width: 1251px) {
+  .half {
+    width: 50%;
+    margin: 0;
+  }
+
+  .half img {
+    padding: 20px;
+  }
 }
