@@ -152,6 +152,9 @@ figcaption {
   color: white;
   padding: 10px;
   text-align: center;
+  bottom: 5px;
+  position: relative;
+  margin-bottom: -5px;
 }
 
 figure img {
@@ -263,6 +266,7 @@ mark {
   position: relative;
   bottom: 0px;
   left: 0px;
+  height: 100%;
 }
 
 /* REQUIREMENT added 2020-05-05 - advanced CSS styling on an image */
@@ -425,12 +429,60 @@ input[type="reset"] {
 
 /* REQUIREMENT added 2020-05-03 desktop media query */
 @media only screen and (min-width: 1251px) {
+  /* REQUIREMENT added 2020-05-03 media query 1 */
   .half {
     width: 50%;
     margin: 0;
   }
-
+  /* REQUIREMENT added 2020-05-03 media query 2 */
   .half img {
     padding: 20px;
+  }
+  /* REQUIREMENT added 2020-05-03 media query 3 */
+  .desktop-row {
+    flex-direction: row;
+  }
+}
+
+/* REQUIREMENT added 2020-05-03 tablet media query */
+@media only screen and (min-width: 800px) and (max-width: 1250px) {
+  .feature-wrapper,
+  .flex-wrapper,
+  fieldset div,
+  desktop-row,
+  .half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card-link,
+  figure,
+  input,
+  label,
+  select,
+  textarea,
+  .half img {
+    width: 90%;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  #sidebar {
+    width: 200px;
+  }
+
+  #logo {
+    width: 100%;
+  }
+
+  .column-fieldset label {
+    text-align: left;
+  }
+
+  .tablet-hide {
+    display: none;
   }
 }
