@@ -164,11 +164,16 @@ figure img {
   color: white;
   border-collapse: collapse;
   margin: 10px;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: rgba(20, 20, 20, 0.5);
+}
+
+/* REQUIREMENT added 2020-05-04 pseudo element */
+#comparison-table tbody tr:nth-child(odd) {
+  background: rgba(32, 71, 71, 0.6);
 }
 
 caption {
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: rgba(32, 71, 71, 0.6);
 }
 
 h2 {
@@ -192,8 +197,10 @@ caption h2 {
   padding: 10px;
 }
 
+/* REQUIRMENT for using iframed YouTube videos */
 iframe {
   margin: 10px;
+  border: none;
 }
 
 pre code {
@@ -225,6 +232,15 @@ pre code {
   padding: 20px;
   border: 1px dashed white;
   margin-top: 20px;
+}
+
+blockquote {
+  color: white;
+  font-size: 22px;
+  background-color: rgba(20, 20, 20, 0.6);
+  padding: 20px 20px 20px 50px;
+  margin: 20px;
+  border-left: 3px solid #2a7f7f;
 }
 
 /***********************
